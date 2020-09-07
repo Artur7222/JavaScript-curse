@@ -1,8 +1,12 @@
 "use strict";
 
-function showFirstMessage() {
-    console.log('Hello World');
+let num = 20;
+
+function showFirstMessage(text) {
+    console.log(text);
+    num = 10;
 }
 
-showFirstMessage();
+showFirstMessage("Hello");
+console.log(num);
 
