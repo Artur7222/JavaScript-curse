@@ -1,39 +1,100 @@
 "use strict"
 
-const arr = [2, 13, 26, 8, 10];
-arr.sort(compareNum);
-console.log(arr);
+// let a = 5,
+//     b = a;
+// b = b + 5;
 
-function compareNum(a, b) {
-    return a-b;
+// console.log (b);
+// console.log (a);
+
+// const obj = {
+//     a: 5,
+//     b: 1
+// };
+
+// const copy = obj;
+
+// copy.a = 10; 
+
+// console.log(copy);
+// console.log(obj);
+
+function copy(mainObj) {
+    let objCopy = {};
+
+    let key;
+    for (key in mainObj) {
+        objCopy[key] = mainObj[key];
+    }
+
+    return objCopy;
 }
 
-// // arr[99] = 0;
+const numbers = {
+    a: 2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4
+    }
+};
 
-// // console.log(arr.length);
+const newNumbers = copy(numbers);
 
-// // console.log(arr);
-
-// arr.forEach(function(item, i, arr) {
-//     console.log(`${i}: ${item} внутри массива ${arr}`)
-// })
+newNumbers.a = 10;
+newNumbers.c.x = 10;
 
 
-// arr.pop();
+console.log(numbers);
+console.log(newNumbers);
 
-// arr.push(10);
+const add = {
+    d: 17,
+    e: 20
+};
 
-// console.log(arr);
+const clone = (Object.assign({}, add));
+clone.d = 20;
 
-// // for (let i = 0; i < arr.length; i++) {
-//     console.log(arr[i]);
-// }
+// console.log(add);
+// console.log(clone);
 
-// for (let value of arr) {
-//     console.log(value);
-// }
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();
 
-// const str = prompt("", "");
-// const products = str.split(", ");
-// products.sort();
-// console.log(products.join(';'));
+newArray[1] = 'SalamAleikum';
+
+console.log(newArray);
+console.log(oldArray);
+
+const video = ['youtube', 'vimeo', 'rutube'],
+    blogs = ['wordpress', 'livejurnal', 'blogger'],
+    internet = [...video, ...blogs, 'vk', 'facebook'];
+
+console.log(internet);    
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+const num = [2, 5, 7];
+
+log(...num);
+
+const array = ["a", "b"];
+
+const newAarray = [...array];
+
+const q = {
+    one: 1,
+    two: 2
+};
+
+const newObj = {...q};
+
+newObj.one = 33;
+
+console.log(newObj);
+console.log (q);
