@@ -1,42 +1,19 @@
 "use strict"
 
-//1
-// let x = 5; alert(x++);
+const box = document.getElementById('box');
+console.log(box);
 
-//2
-// [] + false - null + true;
-// console.log ([] + false - null + true);
+const btns = document.getElementsByTagName('button');
+console.log(btns[0]);
 
-//3
-// let y = 1;
-// let x = y = 2;
-// alert(x);
+const circles = document.getElementsByClassName('circle');
+console.log(circles);
 
-//4
-// console.log([] + 1 + 2);
+const hearts = document.querySelectorAll('.heart');
+hearts.forEach(item => {
+    console.log(item); 
+});
 
-//5
-// console.log('1'[0]);
+const oneHeart = document.querySelector('.heart'); 
+console.log(oneHeart);
 
-//6
-// console.log(2 && 1 && null && 0 && undefined);
-
-//7
-// console.log(!!(1 && 2) === (1 && 2));
-
-//8
-// console.log(null || 2 && 3 || 4);
-
-//9
-// const a = [1, 2, 3];
-// const b = [1, 2, 3];
-// console.log(a==b);
-
-//10
-// console.log(+"infinity"); 
-
-//11
-// console.log('ежик' > 'яблоко');
-
-//12
-// console.log(0 || "" || undefined || true || false);
