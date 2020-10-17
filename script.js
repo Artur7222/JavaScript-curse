@@ -1,58 +1,20 @@
-"use strict"
+// console.log(document.body);
+// console.log(document.documentElement);
+// console.log(document.body.childNodes);
+// console.log(document.body.firstChild);
+// console.log(document.body.firstElementChild);
 
-const box = document.getElementById('box'),
-    btns = document.getElementsByTagName('button'),
-    circles = document.getElementsByClassName('circle'),
-    wrapper = document.querySelector('.wrapper'),
-    hearts = document.querySelectorAll('.heart'),
-    oneHeart = document.querySelector('.heart'); 
+// console.log(document.body.lastChild);
 
-// box.style.backgroundColor = 'blue';
-// box.style.width = '500px';
+// console.log(document.querySelector('#current').parentNode.parentNode);
 
-box.style.cssText = `background-color: blue; width: 500px`;
+// console.log(document.querySelector('#current').parentElement);
 
-btns[1].style.borderRadius = '100%';
-circles[0].style.backgroundColor = 'red';
+// console.log(document.querySelector('[data-current="3"]').nextElementSibling);
 
-// for(let i = 0; i < hearts.length; i++) {
-//     hearts[i].style.backgroundColor = 'blue';
-// };
-
-hearts.forEach(item => {
-    item.style.backgroundColor = 'blue';
-});
-
-const div = document.createElement('div');
-// const text = document.createTextNode('Salamaleikum');
-
-div.classList.add('black');
-
-wrapper.append(div);
-// wrapper.appendChild(div);
-
-// wrapper.prepend(div);
-
-// hearts[0].before(div);
-// hearts[0].after(div);
-
-// wrapper.insertBefore(div, hearts[1]);
-
-
-// circles[0].remove();
-// wrapper.removeChild(hearts[1]);
-
-// hearts[0].replaceWith(circles[0]);
-// wrapper.replaceChild(circles[0], hearts[0]);
-
-div.innerHTML ="<h1>Hello World</h1>";
-
-// div.textContent ="<h1>Hello World</h1>";
-
-div.insertAdjacentHTML('afterend', '<h2>Salam</h2>');
-
-
-
-
-
-
+for (let node of document.body.childNodes) {
+    if (node.nodeName == '#text') {
+        continue;
+    }
+    console.log(node);
+};
